@@ -8,5 +8,11 @@ namespace RabookShelf.Controllers
 {
     public class RabookShelfController : Controller
     {
+        public string Entry()
+        {
+            return "Hello World";
+
+        }
+           
     }
 }
