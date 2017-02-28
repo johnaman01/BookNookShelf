@@ -1,2 +1,2 @@
-# BookNookShelf
+# RabookShelf
 An app to organize stuff, especially books on bookshelves
