@@ -1,8 +1,13 @@
 ﻿@model RabookShelf.RouteConfig
 
 @{
+    //unnecessary once a _ViewStart.cshtml file is added via Home/Index???
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //ViewBag.Title = Model.DisplayText;
+    ViewBag.ShowBackBar = true;
     ViewBag.Title = "Entry";
 }
+
 
 <h2>Entry</h2>
 
@@ -16,6 +21,39 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
+            <!--Put form html here-->
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    @*@Html.LabelFor(m => m.Date, new { @class = "control-label" })*@
+                    @*Html.TextBoxFor(m => m.Date, "{0:d}", new { class = "form-control" })*@
+                </div>
+
+                <div class="form-group">
+                   <input type="text" placeholder="Title" />
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Last"/>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="First" />
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" />
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <input type="checkbox" />
+                </div>
+
+            </div>
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
