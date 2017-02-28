@@ -6,13 +6,12 @@ using System.Web.Mvc;
 
 namespace RabookShelf.Controllers
 {
-    public class RabookShelfController : Controller
+    public class HomeController : Controller
     {
-        public ActionResult Entry()
+        // GET: Home
+        public ActionResult Index()
         {
-            return View("Entry");
-           
+            return View();
         }
-           
     }
 }
