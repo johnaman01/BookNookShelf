@@ -45,6 +45,12 @@ namespace RabookShelf.Data
 
 
         };
+        //Behold a GetBooks method!!!
+        public Book[] GetBooks()
+        {
+            return _books;
+        }
+        
         //TODO Add a GetBook method...not to mention other methods to fulfill CRUD requirements
         public Book GetABook(int id)
         {

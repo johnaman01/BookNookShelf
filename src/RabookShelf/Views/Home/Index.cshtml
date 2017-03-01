@@ -1,4 +1,4 @@
-﻿@model RabookShelf.RouteConfig
+﻿@model RabookShelf.Models.Book[]
 
 @{
     //unnecessary once a _ViewStart.cshtml file is added via Home/Index???
@@ -11,4 +11,27 @@
 
 
 <h2>Index</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="well">
+            @foreach (var book in Model)
+            {
+                <h5>@book.Title</h5>
+
+            }
+
+            <h5><label>Series Title:</label>Title</h5>
+            <h5><label>Author:</label>Author</h5>
+            <h5><label>Favorite:</label>fav</h5>
+        </div>
+        <h5>Description:</h5>
+        <div>some description)</div>
+    </div>
+    <div class="col-md-6">
+        <img src="/Images"
+             alt="some picture" class="img-responsive" />
+    </div>
+</div>
+
 
