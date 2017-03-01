@@ -17,7 +17,7 @@ namespace RabookShelf.Models
         {
             get
             {
-                return Title + ", by " + Author.FirstName + Author.LastName;
+                return "\"" + Title + "\"" + ", by " + Author.FirstName + " " + Author.LastName;
             }
         }
   
