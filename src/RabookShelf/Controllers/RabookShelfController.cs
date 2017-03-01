@@ -13,6 +13,10 @@ namespace RabookShelf.Controllers
             return View("Entry");
            
         }
-          
+
+        //public ActionResult Index()
+        //{
+        //    return View("Index");
+        //}
     }
 }
