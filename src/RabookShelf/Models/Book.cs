@@ -8,7 +8,7 @@ namespace RabookShelf.Models
     public class Book
     {
         public string Title { get; set; }
-        public Author Authors { get; set; }
+        public Author Author { get; set; }
         public BookType BookType { get; set; }
         public bool Favorite { get; set; }
   
