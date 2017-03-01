@@ -11,6 +11,7 @@ namespace RabookShelf.Models
         public Author Author { get; set; }
         public BookType BookType { get; set; }
         public bool Favorite { get; set; }
+        public int Id { get; set; }
   
     }
 }
