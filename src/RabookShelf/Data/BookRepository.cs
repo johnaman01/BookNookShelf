@@ -25,7 +25,25 @@ namespace RabookShelf.Data
                 },
                 Favorite = false,
                 Id = 1
+            },
+            new Book()
+            {
+                Title = "Gone Girl",
+                Author = new Author()
+                {
+                    FirstName = "Julienne",
+                    LastName = "Flynn",
+                    Pseudonym = ""
+                },
+                BookType = new BookType()
+                {
+                    HardCover = true
+                },
+                Favorite = true,
+                Id = 2
             }
+
+
         };
         //TODO Add a GetBook method...not to mention other methods to fulfill CRUD requirements
         public Book GetABook(int id)
