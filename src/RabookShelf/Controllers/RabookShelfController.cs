@@ -15,17 +15,29 @@ namespace RabookShelf.Controllers
         {
             _bookRepository = new BookRepository();
         }
+
         //Get Entry
         public ActionResult Entry()
         {
             return View("Entry");  
         }
 
+        //Get Index
         public ActionResult Index()
         {
-            var books = _bookRepository.GetBooks();
-            return View(books);
+            return View("Index");
         }
+
+    }
+
+    //public ActionResult Index()
+    //    {
+    //        var books = _bookRepository.GetBooks();
+
+    //        return View(books);
+    //    }
+
+
         //public ActionResult Detail(int? id)
         //{
         //    if (id == null)
@@ -37,5 +49,5 @@ namespace RabookShelf.Controllers
 
         //    return View(comicBook);
         //}
-    }
+    
 }
