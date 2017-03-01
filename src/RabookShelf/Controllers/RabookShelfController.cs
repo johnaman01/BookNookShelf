@@ -25,7 +25,8 @@ namespace RabookShelf.Controllers
         //Get Index
         public ActionResult Index()
         {
-            return View("Index");
+            var books = _bookRepository.GetBooks();
+            return View(books);
         }
 
     }
