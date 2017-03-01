@@ -7,12 +7,12 @@ using System.Web.Mvc;
 namespace RabookShelf.Controllers
 {
     public class RabookShelfController : Controller
-    {
+    {   
         public ActionResult Entry()
         {
             return View("Entry");
            
         }
-           
+          
     }
 }
