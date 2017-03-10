@@ -7,8 +7,9 @@ namespace RabookShelf.Models
 {
     public class BookType
     {
-            public bool HardCover { get; set; }
-            public bool Paperback { get; set; }
-            public bool Textbook { get; set; } 
+        public enum BookTypes
+        {
+            HardCover = 1, PaperBack, TextBook
+        }
     }
 }

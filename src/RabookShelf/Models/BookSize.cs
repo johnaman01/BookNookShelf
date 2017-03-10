@@ -5,14 +5,14 @@ using System.Web;
 
 namespace RabookShelf.Models
 {
-    public class BookSizes
+    public class BookSize
     {
-        public enum BookSize
+        public enum BookSizes
         {   
             Small = 1,
-            Normal = 2,
-            Large = 3,
-            Huge = 4
+            Normal,
+            Large,
+            Huge
         }
     }
 }

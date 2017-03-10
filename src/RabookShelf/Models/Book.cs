@@ -7,11 +7,16 @@ namespace RabookShelf.Models
 {
     public class Book
     {
+        public int Id { get; set; }
         public string Title { get; set; }
         public Author Author { get; set; }
+
+        public bool Fiction { get; set; }
+        //would rather a Genre
+        public BookSize BookSize { get; set; }
         public BookType BookType { get; set; }
+        
         public bool Favorite { get; set; }
-        public int Id { get; set; }
 
         public string DisplayText
         {

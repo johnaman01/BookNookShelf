@@ -19,10 +19,10 @@ namespace RabookShelf.Data
                     LastName = "Amann",
                     Pseudonym = "Lovelace"
                 },
-                BookType = new BookType()
-                {
-                    HardCover = true
-                },
+                //BookType = new BookType()
+                //{
+                //    HardCover = true
+                //},
                 Favorite = false,
                 Id = 1
             },
@@ -35,10 +35,10 @@ namespace RabookShelf.Data
                     LastName = "Flynn",
                     Pseudonym = ""
                 },
-                BookType = new BookType()
-                {
-                    HardCover = true
-                },
+                //BookType = new BookType()
+                //{
+                //    HardCover = 1
+                //},
                 Favorite = true,
                 Id = 2
             }
