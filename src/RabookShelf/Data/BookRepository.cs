@@ -13,7 +13,7 @@ namespace RabookShelf.Data
             new Book()
             {
                 Title = "Some Book",
-                Author = new Author()
+            Author = new Author()
                 {
                     FirstName = "John",
                     LastName = "Amann",

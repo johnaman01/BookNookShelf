@@ -12,6 +12,9 @@ namespace RabookShelf.Models
         public string Pseudonym { get; set; }
         public string Nationality { get; set; }
 
+       //public List<Book> Books { get; set; }
+        //nav to book
+
         //public string Gender { get; set; }
         //make an enum?
     }
