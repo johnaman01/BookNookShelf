@@ -129,7 +129,7 @@
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookSize.cs" />
     <Compile Include="Models\BookType.cs" />
-    <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\RabookContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
