@@ -9,35 +9,22 @@ namespace RabookShelf.Controllers
 {
     public class RabookShelfController : Controller
     {
-        private BookRepository _bookRepository = null;
-
-        public RabookShelfController()
-        {
-            _bookRepository = new BookRepository();
-        }
+        private Context db = new Context();
 
         //Get Entry
-        public ActionResult Entry()
-        {
-            return View("Entry");  
-        }
-
-        //Get Index
-        //public ActionResult Index()
+        //public ActionResult Entry()
         //{
-        //    var books = _bookRepository.GetBooks();
-        //    return View(books);
+        //    return View("Entry");  
         //}
 
+        //Get Index
+        public ActionResult Index()
+        {
+            var books = Repository.GetBooks();
+            return View(books);
+        }
+
     }
-
-    //public ActionResult Index()
-    //    {
-    //        var books = _bookRepository.GetBooks();
-
-    //        return View(books);
-    //    }
-
 
         //public ActionResult Detail(int? id)
         //{

@@ -16,5 +16,7 @@ namespace RabookShelf.Models
         public Author Author { get; set; }
         public Book Book { get; set; }
         //payload nav
+
+
     }
 }

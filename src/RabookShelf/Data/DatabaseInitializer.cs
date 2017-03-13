@@ -7,7 +7,7 @@ using System.Web;
 
 namespace RabookShelf.Data
 {
-    internal class DatabaseInitializer : DropCreateIfModelChanges<Context>
+    internal class DatabaseInitializer : DropCreateDatabaseIfModelChanges<Context>
     {
         protected override void Seed(Context context)
         {
@@ -27,7 +27,18 @@ namespace RabookShelf.Data
             {
                 Title = "Some Book",
             };
+
             book1.AddAuthor(me);
+            context.Books.Add(book1);
+
+            var book2 = new Book()
+            {
+                Title = "Another One"
+            };
+            book2.AddAuthor(julia);
+            context.Books.Add(book2);
+
+            context.SaveChanges();
         }
     }
 }
