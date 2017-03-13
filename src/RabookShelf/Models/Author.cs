@@ -21,6 +21,15 @@ namespace RabookShelf.Models
         //make an enum?
 
         public ICollection<AuthorBook> Books { get; set; }
-        //nav to book     
+        //nav to book
+
+        public string AuthorDisplayText
+        {
+            get
+            {
+                return " by, " + FirstName + " " + LastName;
+            }
+        }
+
     }
 }

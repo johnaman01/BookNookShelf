@@ -24,24 +24,23 @@
             <div class="col-md-6">
 
                 <div class="form-group">
-                    @*@Html.LabelFor(m => m.Date, new { @class = "control-label" })*@
-                    @*Html.TextBoxFor(m => m.Date, "{0:d}", new { class = "form-control" })*@
+                   <label for="Title" class="control-label">Title</label>
+                   <input type="text" id="Title" name="Title" class="form-control"/>
                 </div>
 
                 <div class="form-group">
-                   <input type="text" placeholder="Title" />
+                    <label for="FirstName" class="control-label">First Name</label>
+                    <input type="text" id="FirstName" name="FirstName" class="form-control" />
                 </div>
 
                 <div class="form-group">
-                    <input type="text" placeholder="Last"/>
+                    <label for="LastName" class="control-label">Last Name</label>
+                    <input type="text" id="LastName" name="LastName" class="form-control" />
                 </div>
 
                 <div class="form-group">
-                    <input type="text" placeholder="First" />
-                </div>
-
-                <div class="form-group">
-                    <input type="checkbox" />
+                    <label for="Title" class="control-label"></label>
+                    <input type="text" id="Title" name="Title" class="form-control" />
                 </div>
 
             </div>
@@ -49,7 +48,8 @@
             <div class="col-md-6">
 
                 <div class="form-group">
-                    <input type="text" />
+                    <label for="Description" class="control-label">Description</label>
+                    <textarea id="Description" name="Description" class="form-control" rows="14" cols="20"></textarea>
                 </div>
 
             </div>

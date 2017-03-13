@@ -30,11 +30,11 @@ namespace RabookShelf.Models
             });
         }
 
-        public string DisplayText
+        public string BookDisplayText
         {
             get
             {
-                return "\"" + "\"" + ", by ";
+                return "\"" + Title + "\"";
             }
         }
 

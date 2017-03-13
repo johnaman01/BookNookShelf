@@ -11,12 +11,6 @@ namespace RabookShelf.Controllers
     {
         private Context db = new Context();
 
-        //Get Entry
-        //public ActionResult Entry()
-        //{
-        //    return View("Entry");  
-        //}
-
         //Get Index
         public ActionResult Index()
         {
@@ -24,18 +18,17 @@ namespace RabookShelf.Controllers
             return View(books);
         }
 
+        //Add
+
+        //Edit
+
+        //Delete
+
+        //Get Entry
+        public ActionResult Entry()
+        {
+            return View("Entry");
+        }
+
     }
-
-        //public ActionResult Detail(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return HttpNotFound();
-        //    }
-        //    //id.Value below used to get at underlying value when using nullable type
-        //    var comicBook = _comicBookRepository.GetComicBook(id.Value);
-
-        //    return View(comicBook);
-        //}
-    
 }
