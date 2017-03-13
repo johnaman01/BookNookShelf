@@ -126,10 +126,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\AuthorBook.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BookSize.cs" />
     <Compile Include="Models\BookType.cs" />
-    <Compile Include="Models\RabookContext.cs" />
+    <Compile Include="Data\Context.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

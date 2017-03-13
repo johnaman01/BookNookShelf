@@ -13,12 +13,12 @@ namespace RabookShelf.Data
             new Book()
             {
                 Title = "Some Book",
-            Author = new Author()
-                {
-                    FirstName = "John",
-                    LastName = "Amann",
-                    Pseudonym = "Lovelace"
-                },
+                //Author = new Author()
+                //{
+                //    FirstName = "John",
+                //    LastName = "Amann",
+                //    Pseudonym = "Lovelace"
+                //},
                 //BookType = new BookType()
                 //{
                 //    HardCover = true
@@ -29,12 +29,12 @@ namespace RabookShelf.Data
             new Book()
             {
                 Title = "Gone Girl",
-                Author = new Author()
-                {
-                    FirstName = "Julienne",
-                    LastName = "Flynn",
-                    Pseudonym = ""
-                },
+                //Author = new Author()
+                //{
+                //    FirstName = "Julienne",
+                //    LastName = "Flynn",
+                //    Pseudonym = ""
+                //},
                 //BookType = new BookType()
                 //{
                 //    HardCover = 1

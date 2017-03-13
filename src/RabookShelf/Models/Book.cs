@@ -7,6 +7,11 @@ namespace RabookShelf.Models
 {
     public class Book
     {
+        public Book()
+        {
+            Authors = new List<AuthorBook>();
+        }
+
         public int Id { get; set; }
         public string Title { get; set; }
        
@@ -16,15 +21,24 @@ namespace RabookShelf.Models
         public BookType BookType { get; set; }     
         public bool Favorite { get; set; }
 
-        //public List<Author> Authors { get; set; }
+        public ICollection<AuthorBook> Authors { get; set; }
         //nav to author
-        public string DisplayText
+
+        public void AddAuthor(Author author)
         {
-            get
+            Authors.Add(new AuthorBook()
             {
-                return "\"" + Title + "\"" + ", by " + Author.FirstName + " " + Author.LastName;
-            }
+                Author = author
+            });
         }
+
+        //public string DisplayText
+        //{
+        //    get
+        //    {
+        //        return "\"" + Title + "\"" + ", by " + Author.FirstName + " " + Author.LastName;
+        //    }
+        //}
   
     }
 }
