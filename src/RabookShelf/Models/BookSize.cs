@@ -10,9 +10,9 @@ namespace RabookShelf.Models
         public enum BookSizes
         {   
             Small = 1,
-            Normal,
-            Large,
-            Huge
+            Normal = 2,
+            Large = 3,
+            Huge = 4
         }
     }
 }

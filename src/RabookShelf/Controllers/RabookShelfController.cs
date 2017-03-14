@@ -1,4 +1,5 @@
 ﻿using RabookShelf.Data;
+using RabookShelf.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,11 +27,14 @@ namespace RabookShelf.Controllers
 
         //Add
         [HttpPost]
-        public ActionResult Add(string title, string firstName, string lastName, string description)
+        public ActionResult Add(string title, string firstName, string lastName, 
+                                bool? fiction, BookSize booksize, string description)
         {
             ViewBag.Title = title;
             ViewBag.FirstName = firstName;
             ViewBag.LastName = lastName;
+            ViewBag.Fiction = fiction;
+            ViewBag.BookSize = booksize;
             ViewBag.Description = description;
 
             return View("Add");
