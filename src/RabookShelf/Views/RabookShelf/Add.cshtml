@@ -1,8 +1,8 @@
 ﻿@model RabookShelf.Models.Book
 
-@{
+@*@{
     ViewBag.Title = "Add";
-}
+}*@
 
 <h2>Add</h2>
 
@@ -18,16 +18,16 @@
             <div class="form-group">
                 <div class="form-group">
                     <label for="Title" class="control-label">Title</label>
-                    <input type="text" id="Title" name="Title" class="form-control" />
+                    <input type="text" id="Title" name="Title" class="form-control" value="@ViewBag.Title" />
                 </div>
                 <div class="form-group">
                     <label for="FirstName" class="control-label">First Name</label>
-                    <input type="text" id="FirstName" name="FirstName" class="form-control" />
+                    <input type="text" id="FirstName" name="FirstName" class="form-control" value="@ViewBag.FirstName" />
                 </div>
 
                 <div class="form-group">
                     <label for="LastName" class="control-label">Last Name</label>
-                    <input type="text" id="LastName" name="LastName" class="form-control" />
+                    <input type="text" id="LastName" name="LastName" class="form-control" value="@ViewBag.LastName"/>
                 </div>
 
             </div>
@@ -38,7 +38,8 @@
 
             <div class="form-group">
                 <label for="Description" class="control-label">Description</label>
-                <textarea id="Description" name="Description" class="form-control" rows="14" cols="20"></textarea>
+                <textarea id="Description" name="Description" class="form-control"
+                          rows="14" cols="20">@ViewBag.Description</textarea>
             </div>
 
         </div>

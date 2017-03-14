@@ -25,9 +25,14 @@ namespace RabookShelf.Controllers
         }
 
         //Add
-        [ActionName("Add"), HttpPost]
-        public ActionResult AddBook()
+        [HttpPost]
+        public ActionResult Add(string title, string firstName, string lastName, string description)
         {
+            ViewBag.Title = title;
+            ViewBag.FirstName = firstName;
+            ViewBag.LastName = lastName;
+            ViewBag.Description = description;
+
             return View("Add");
         }
 
