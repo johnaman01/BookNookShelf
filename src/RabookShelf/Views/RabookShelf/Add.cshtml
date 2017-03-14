@@ -17,25 +17,25 @@
         <div class="col-md-6">
             <div class="form-group">
                 <div class="form-group">
-                    <label for="Title" class="control-label">Title</label>
-                    <input type="text" id="Title" name="Title" class="form-control" value="@ViewBag.Title" />
+                    @Html.Label("Title", new { @class = "control-label" })
+                    @Html.TextBox("Title", null, new { @class = "form-control" })
                 </div>
                 <div class="form-group">
-                    <label for="FirstName" class="control-label">First Name</label>
-                    <input type="text" id="FirstName" name="FirstName" class="form-control" value="@ViewBag.FirstName" />
+                    @Html.Label("FirstName", new { @class = "control-label" })
+                    @Html.TextBox("FirstName", null, new { @class = "form-control" })
                 </div>
 
                 <div class="form-group">
-                    <label for="LastName" class="control-label">Last Name</label>
-                    <input type="text" id="LastName" name="LastName" class="form-control" value="@ViewBag.LastName"/>
+                    @Html.Label("LastName", new { @class = "control-label" })
+                    @Html.TextBox("LastName", null, new { @class = "form-control" })
                 </div>
                 <div class="form-group">
-                    <label for="BookSize" class="control-label">BookSize</label>
-                    <input type="text" id="BookSize" name="BookSize" class="form-control" value="@ViewBag.BookSize" />
+                   @Html.Label("BookSize", new { @class = "control-label" })
+                   @Html.TextBox("BookSize", null, new { @class = "form-control" })
                 </div>
                 <div class="form-group">
-                    <label for="Fiction" class="control-label">Fiction</label>
-                    <input type="text" id="Fiction" name="Fiction" class="form-control" value="@ViewBag.Fiction" />
+                    @Html.Label("Fiction", new { @class = "control-label" })
+                    @Html.TextBox("Fiction", null, new { @class = "form-control" })
                 </div>
 
             </div>
@@ -45,9 +45,8 @@
         <div class="col-md-6">
 
             <div class="form-group">
-                <label for="Description" class="control-label">Description</label>
-                <textarea id="Description" name="Description" class="form-control"
-                          rows="14" cols="20">@ViewBag.Description</textarea>
+                @Html.Label("Description", new { @class = "control-label" })
+                @Html.TextArea("Description", null, 14, 20, new { @class = "form-control" })
             </div>
 
         </div>

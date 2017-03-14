@@ -30,13 +30,6 @@ namespace RabookShelf.Controllers
         public ActionResult Add(string title, string firstName, string lastName, 
                                 bool? fiction, BookSize booksize, string description)
         {
-            ViewBag.Title = ModelState["Title"].Value.AttemptedValue;
-            ViewBag.FirstName = ModelState["FirstName"].Value.AttemptedValue;
-            ViewBag.LastName = ModelState["LastName"].Value.AttemptedValue;
-            ViewBag.Fiction = ModelState["Fiction"].Value.AttemptedValue;
-            ViewBag.BookSize = ModelState["BookSize"].Value.AttemptedValue;
-            ViewBag.Description = ModelState["Description"].Value.AttemptedValue;
-
             return View("Add");
         }
 
