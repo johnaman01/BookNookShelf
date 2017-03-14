@@ -24,6 +24,14 @@ namespace RabookShelf.Controllers
             return View("Add");
         }
 
+        //Add
+        [ActionName("Add"), HttpPost]
+        public ActionResult AddBook()
+        {
+            return View("Add");
+        }
+
+
         //Edit
 
         //Delete
