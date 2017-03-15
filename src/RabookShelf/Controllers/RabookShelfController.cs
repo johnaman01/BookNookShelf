@@ -30,9 +30,11 @@ namespace RabookShelf.Controllers
             {
                 
                 Repository.AddBook(book);
-                
+
                 //TODO redirect to index (to see the book just added);
-                //return View("Index");
+                return RedirectToAction("Index");
+                
+                
             }
             return View(book);
         }
