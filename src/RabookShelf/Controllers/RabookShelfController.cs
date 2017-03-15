@@ -28,8 +28,11 @@ namespace RabookShelf.Controllers
         {   
             if (ModelState.IsValid)
             {
+                
                 Repository.AddBook(book);
+                
                 //TODO redirect to index (to see the book just added);
+                //return View("Index");
             }
             return View(book);
         }

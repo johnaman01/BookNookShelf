@@ -29,7 +29,14 @@ namespace RabookShelf.Data
         {
             using (Context context = GetContext())
             {
+                // Get the next available entry ID.
+                int nextAvailableEntryId = context.Books
+                                           .Max(b => b.Id) + 1;
+
+                book.Id = nextAvailableEntryId;
+
                 context.Books.Add(book);
+                context.SaveChanges();
             }
         }
     }
