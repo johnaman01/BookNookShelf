@@ -10,7 +10,7 @@ namespace RabookShelf.Controllers
 {
     public class RabookShelfController : Controller
     {
-        private Context db = new Context();
+        private Context context = new Context();
 
         //Get Index
         public ActionResult Index()

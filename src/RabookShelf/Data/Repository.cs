@@ -25,5 +25,15 @@ namespace RabookShelf.Data
                     .ToList();
             }
         }
+        //TODO
+        //<Add a AddBook method>
+        //
+        public static void AddBook(Book book)
+        {
+            using (Context context = GetContext())
+            {
+                context.Books.Add(book);
+            }
+        }
     }
 }

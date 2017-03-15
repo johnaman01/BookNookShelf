@@ -7,7 +7,7 @@ using System.Web;
 
 namespace RabookShelf.Data
 {
-    internal class DatabaseInitializer : DropCreateDatabaseIfModelChanges<Context>
+    internal class DatabaseInitializer : CreateDatabaseIfNotExists<Context>
     {
         protected override void Seed(Context context)
         {
