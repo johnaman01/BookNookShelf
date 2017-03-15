@@ -17,25 +17,22 @@
         <div class="col-md-6">
             <div class="form-group">
                 <div class="form-group">
-                    @Html.Label("Title", new { @class = "control-label" })
-                    @Html.TextBox("Title", null, new { @class = "form-control" })
+                    @Html.LabelFor(b => b.Title, new { @class = "control-label" })
+                    @Html.TextBoxFor(b => b.Title, new { @class = "form-control" })
                 </div>
                 <div class="form-group">
-                    @Html.Label("FirstName", new { @class = "control-label" })
-                    @Html.TextBox("FirstName", null, new { @class = "form-control" })
+                    @Html.LabelFor(b => b.Author.FirstName, new { @class = "control-label" })
+                    @Html.TextBoxFor(b => b.Author.FirstName, new { @class = "form-control" })
                 </div>
 
                 <div class="form-group">
-                    @Html.Label("LastName", new { @class = "control-label" })
-                    @Html.TextBox("LastName", null, new { @class = "form-control" })
+                    @Html.LabelFor(b => b.Author.LastName, new { @class = "control-label" })
+                    @Html.TextBoxFor(b => b.Author.LastName, new { @class = "form-control" })
                 </div>
+                
                 <div class="form-group">
-                   @Html.Label("BookSize", new { @class = "control-label" })
-                   @Html.TextBox("BookSize", null, new { @class = "form-control" })
-                </div>
-                <div class="form-group">
-                    @Html.Label("Fiction", new { @class = "control-label" })
-                    @Html.TextBox("Fiction", null, new { @class = "form-control" })
+                    @Html.LabelFor(b => b.Fiction, new { @class = "control-label" })
+                    @Html.TextBoxFor(b => b.Fiction, new { @class = "form-control" })
                 </div>
 
             </div>
@@ -45,8 +42,8 @@
         <div class="col-md-6">
 
             <div class="form-group">
-                @Html.Label("Description", new { @class = "control-label" })
-                @Html.TextArea("Description", null, 14, 20, new { @class = "form-control" })
+                @Html.LabelFor(b => b.Description, new { @class = "control-label" })
+                @Html.TextAreaFor(b => b.Description, new { @class = "form-control" })
             </div>
 
         </div>

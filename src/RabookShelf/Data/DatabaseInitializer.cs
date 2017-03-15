@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace RabookShelf.Data
 {
-    internal class DatabaseInitializer : CreateDatabaseIfNotExists<Context>
+    internal class DatabaseInitializer : DropCreateDatabaseIfModelChanges<Context>
     {
         protected override void Seed(Context context)
         {
@@ -21,17 +21,19 @@ namespace RabookShelf.Data
 
             var book1 = new Book()
             {
-                Title = "Some Book",
+                Author = julia,
+                Title = "Some Book"
             };
 
-            book1.AddAuthor(me);
+            
             context.Books.Add(book1);
 
             var book2 = new Book()
             {
+                Author = me,
                 Title = "Another One"
             };
-            book2.AddAuthor(julia);
+            
             context.Books.Add(book2);
 
             context.SaveChanges();

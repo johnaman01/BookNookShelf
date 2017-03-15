@@ -15,7 +15,7 @@
         <div class="well">
             @foreach (var b in Model)
             {
-            <h5>@Html.ActionLink(b.BookDisplayText + b.Authors.ToString(), "Entry", new { id = b.Id })</h5>
+            <h5>@Html.ActionLink(b.BookDisplayText, "Book", new { id = b.Id })</h5>
 
             }             
         </div>

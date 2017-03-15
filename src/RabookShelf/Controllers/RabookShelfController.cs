@@ -18,15 +18,20 @@ namespace RabookShelf.Controllers
         //Add
         public ActionResult Add()
         {
-            return View("Add");
+            var book = new Book();
+            return View(book);
         }
 
         //Add
         [HttpPost]
-        public ActionResult Add(string title, string firstName, string lastName, 
-                                bool? fiction, BookSize booksize, string description)
-        {
-            return View("Add");
+        public ActionResult Add(Book book)
+        {   
+            if (ModelState.IsValid)
+            {
+                Repository.AddBook(book);
+                //TODO redirect to index (to see the book just added);
+            }
+            return View(book);
         }
 
 

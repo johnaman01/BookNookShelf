@@ -4,10 +4,6 @@ namespace RabookShelf.Models
 {
     public class Author
     {
-        public Author()
-        {
-            Books = new List<AuthorBook>();
-        }
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -17,16 +13,8 @@ namespace RabookShelf.Models
         //public string Gender { get; set; }
         //make an enum?
 
-        public ICollection<AuthorBook> Books { get; set; }
+        public ICollection<Book> Books { get; set; }
         //nav to book
-
-        public string AuthorDisplayText
-        {
-            get
-            {
-                return " by, " + FirstName + " " + LastName;
-            }
-        }
 
     }
 }
