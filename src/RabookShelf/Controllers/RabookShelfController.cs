@@ -19,7 +19,11 @@ namespace RabookShelf.Controllers
         public ActionResult Add()
         {
             var book = new Book();
+
+            ViewBag.GenresSelectListItems = new SelectList(context.Books, "Id", "Name" );
+
             return View(book);
+
         }
 
         //Add
@@ -33,9 +37,9 @@ namespace RabookShelf.Controllers
 
                 //TODO redirect to index (to see the book just added);
                 return RedirectToAction("Index");
-                
-                
             }
+
+            ViewBag.GenresSelectListItems = new SelectList(context.Genres, "Id", "Name");
             return View(book);
         }
 

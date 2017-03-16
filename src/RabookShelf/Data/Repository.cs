@@ -22,6 +22,7 @@ namespace RabookShelf.Data
                     .ToList();
             }
         }
+       
         //TODO
         //<Add a AddBook method>
         //

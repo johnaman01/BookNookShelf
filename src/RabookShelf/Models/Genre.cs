@@ -10,9 +10,12 @@
             Fantasy = 4,
             Philosophy = 5,
             SelfHelp = 6
+        }
 
-
-
+        public Genre(GenreName genreName, string name = null)
+        {
+            Id = (int)genreName;
+            Name = name ?? genreName.ToString();
         }
 
         public int Id { get; set; }
