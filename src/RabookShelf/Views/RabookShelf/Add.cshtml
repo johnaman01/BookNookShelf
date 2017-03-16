@@ -31,8 +31,8 @@
                 </div>
                 
                 <div class="form-group">
-                    @Html.LabelFor(b => b.GenreId, new { @class = "control-label" })
-                    @Html.DropDownListFor(b => b.GenreId,
+                    @Html.LabelFor(b => b.Genre.Id, new { @class = "control-label" })
+                    @Html.DropDownListFor(b => b.Genre.Id,
                         (SelectList)ViewBag.GenresSelectListItems, new { @class = "form-control" })
                 </div>
 
