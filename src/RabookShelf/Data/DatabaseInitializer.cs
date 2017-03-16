@@ -43,7 +43,10 @@ namespace RabookShelf.Data
                 new Genre(Genre.GenreName.Philosophy),
                 new Genre(Genre.GenreName.SelfHelp)
             };
-            context.Genres.Add(genres);
+            foreach (Genre genre in genres)
+            {
+                context.Genres.Add(genre);
+            }
 
             context.SaveChanges();
         }
