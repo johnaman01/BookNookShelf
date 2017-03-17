@@ -20,8 +20,6 @@ namespace RabookShelf.Controllers
         {
             var book = new Book();
 
-            ViewBag.GenresSelectListItems = new SelectList(context.Books, "Id", "Name" );
-
             return View(book);
 
         }
@@ -39,7 +37,6 @@ namespace RabookShelf.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.GenresSelectListItems = new SelectList(context.Genres, "Id", "Name");
             return View(book);
         }
 

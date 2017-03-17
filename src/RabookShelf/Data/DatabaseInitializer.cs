@@ -24,6 +24,7 @@ namespace RabookShelf.Data
             {
                 Author = julia,
                 Title = "Some Book"
+                
             }; 
             context.Books.Add(book1);
 
@@ -33,20 +34,6 @@ namespace RabookShelf.Data
                 Title = "Another One"
             };
             context.Books.Add(book2);
-
-            var genres = new List<Genre>()
-            {
-                new Genre(Genre.GenreName.Fiction),
-                new Genre(Genre.GenreName.NonFiction),
-                new Genre(Genre.GenreName.SciFi),
-                new Genre(Genre.GenreName.Fantasy),
-                new Genre(Genre.GenreName.Philosophy),
-                new Genre(Genre.GenreName.SelfHelp)
-            };
-            foreach (Genre genre in genres)
-            {
-                context.Genres.Add(genre);
-            }
 
             context.SaveChanges();
         }

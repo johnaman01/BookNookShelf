@@ -1,9 +1,10 @@
 ﻿@model RabookShelf.Models.Book
 
-
-@*@{
+@{
     ViewBag.Title = "Add";
-}*@
+
+}
+
 
 <h2>Add</h2>
 
@@ -32,9 +33,12 @@
                 </div>
                 
                 <div class="form-group">
-                    @Html.LabelFor(b => b.Genre.Id, new { @class = "control-label" })
-                    @Html.DropDownListFor(b => b.Genre.Id,
-                        (SelectList)ViewBag.GenresSelectListItems, new { @class = "form-control" })
+                    @Html.LabelFor(b => b.Genre, new { @class = "control-label" })
+                    <div>
+                        @Html.RadioButtonFor(b => b.Genre, "Fiction") Fiction
+                        @Html.RadioButtonFor(b => b.Genre, "Fiction") Non-Fiction
+                        @Html.RadioButtonFor(b => b.Genre, "Fiction") Fantasy
+                    </div>
                 </div>
 
             </div>
