@@ -28,6 +28,13 @@ namespace RabookShelf.Controllers
         [HttpPost]
         public ActionResult Add(Book book)
         {   
+            //If there arent any Title field validation errors then make sure that the title
+            //is not an empty string.
+            if (ModelState.IsValidField("Title") && book.Title == "")
+            {
+                ModelState.AddModelError("Title", "Please give the book a Title.");
+            }
+
             if (ModelState.IsValid)
             {
                 
