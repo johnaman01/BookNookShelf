@@ -28,7 +28,8 @@ namespace RabookShelf.Controllers
         [HttpPost]
         public ActionResult Add(Book book)
         {
-            ModelState.AddModelError("", "The form has detected the following errors:");
+            //ModelState.AddModelError("", "The form has detected the following errors:");
+
             //If there arent any Title field validation errors then make sure that the title
             //is not an empty string.
             if (ModelState.IsValidField("Title") && book.Title == null)
@@ -37,10 +38,8 @@ namespace RabookShelf.Controllers
             }
 
             if (ModelState.IsValid)
-            {
-                
+            {           
                 Repository.AddBook(book);
-
                 //TODO redirect to index (to see the book just added);
                 return RedirectToAction("Index");
             }
