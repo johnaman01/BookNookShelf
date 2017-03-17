@@ -30,10 +30,12 @@ namespace RabookShelf.Models
         }
 
         public int Id { get; set; }
+
         public string Title { get; set; }
-       
+        
+        [MaxLength(50, ErrorMessage = "Only 50 characters, please, lest you're writing a novel of your own!")]
         public string Description { get; set; }
- 
+        
         public Author Author { get; set; }
         //nav to author
 

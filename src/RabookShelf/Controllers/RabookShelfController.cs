@@ -30,7 +30,7 @@ namespace RabookShelf.Controllers
         {   
             //If there arent any Title field validation errors then make sure that the title
             //is not an empty string.
-            if (ModelState.IsValidField("Title") && book.Title == "")
+            if (ModelState.IsValidField("Title") && book.Title == null)
             {
                 ModelState.AddModelError("Title", "Please give the book a Title.");
             }
