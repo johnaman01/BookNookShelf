@@ -1,5 +1,5 @@
 ﻿@model RabookShelf.Models.Book
-
+@using RabookShelf.Models
 @{
     ViewBag.Title = "Add";
 
@@ -35,9 +35,16 @@
                 <div class="form-group">
                     @Html.LabelFor(b => b.Genre, new { @class = "control-label" })
                     <div>
-                        @Html.RadioButtonFor(b => b.Genre, "Fiction") Fiction
-                        @Html.RadioButtonFor(b => b.Genre, "Fiction") Non-Fiction
-                        @Html.RadioButtonFor(b => b.Genre, "Fiction") Fantasy
+                        <label class="checkbox-inline">
+                            @Html.RadioButtonFor(b => b.Genre, Book.GenreName.Fiction) @Book.GenreName.Fiction
+                        </label>
+                        <label class="checkbox-inline">
+                            @Html.RadioButtonFor(b => b.Genre, Book.GenreName.NonFiction) @Book.GenreName.NonFiction
+                        </label>
+                        <label class="checkbox-inline">
+                            @Html.RadioButtonFor(b => b.Genre, Book.GenreName.Fantasy) @Book.GenreName.Fantasy
+                        </label>
+
                     </div>
                 </div>
 
