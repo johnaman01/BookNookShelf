@@ -13,6 +13,8 @@ namespace RabookShelf.Data
             context.Database.Log = (message) => Debug.WriteLine(message);
             return context;
         }
+
+        //GetBooks method
         public static IList<Book> GetBooks()
         {
             using (Context context = GetContext())
@@ -22,7 +24,19 @@ namespace RabookShelf.Data
                     .ToList();
             }
         }
-       
+        
+        //GetABook method
+        public static Book GetABook(int id)
+        {
+            using (Context context = GetContext())
+            {
+                Book book = context.Books
+                .Where(b => b.Id == id)
+                .SingleOrDefault();
+
+                return book;
+            }
+        }
         //TODO
         //<Add a AddBook method>
         //
@@ -38,6 +52,15 @@ namespace RabookShelf.Data
 
                 context.Books.Add(book);
                 context.SaveChanges();
+            }
+        }
+        //TODO
+        //<Add an UpdateBook method>
+        public static void UpdateBook(Book book)
+        {
+            using (Context context = GetContext())
+            {
+                
             }
         }
     }

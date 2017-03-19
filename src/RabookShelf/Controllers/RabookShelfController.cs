@@ -1,5 +1,6 @@
 ﻿using RabookShelf.Data;
 using RabookShelf.Models;
+using System.Net;
 using System.Web.Mvc;
 
 namespace RabookShelf.Controllers
@@ -28,17 +29,12 @@ namespace RabookShelf.Controllers
         [HttpPost]
         public ActionResult Add(Book book)
         {
-            //ModelState.AddModelError("", "The form has detected the following errors:");
-
             //If there arent any Title field validation errors then make sure that the title
             //is not an empty string.
-            if (ModelState.IsValidField("Title") && book.Title == null)
-            {
-                ModelState.AddModelError("Title", "Please give the book a Title.");
-            }
+            ValidateTitle(book);
 
             if (ModelState.IsValid)
-            {           
+            {
                 Repository.AddBook(book);
                 //TODO redirect to index (to see the book just added);
                 return RedirectToAction("Index");
@@ -47,16 +43,50 @@ namespace RabookShelf.Controllers
             return View(book);
         }
 
-
         //Edit
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+           
+            Book book = Repository.GetABook((int)id);
+
+            if (book == null)
+            {
+                return new HttpNotFoundResult();
+            }
+
+            return View(book);
+        }
+
+        //Edit post action method
+        [HttpPost]
+        public ActionResult Edit(Book book)
+        {
+   
+            ValidateTitle(book);
+            //TODO if the entry is valid....
+            //1) use the repo to update the entry
+            //2) redirect the user to the books list page, ie Index
+            if (ModelState.IsValid)
+            {
+
+            }
+           
+            return View(book);
+        }
 
         //Delete
 
-        //Get Edit
-        public ActionResult Edit()
-        {
-            return View("Edit");
-        }
 
+        private void ValidateTitle(Book book)
+        {
+            if (ModelState.IsValidField("Title") && book.Title == null)
+            {
+                ModelState.AddModelError("Title", "Please give the book a Title.");
+            }
+        }
     }
 }
