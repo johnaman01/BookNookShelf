@@ -71,7 +71,7 @@ namespace RabookShelf.Data
                 context.Books.Attach(book);
                 
                 //What does this do?
-                var bookEntry = context.Entry(book);
+                //var bookEntry = context.Entry(book);
                 context.SaveChanges();
 
             }

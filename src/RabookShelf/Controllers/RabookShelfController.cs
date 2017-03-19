@@ -58,6 +58,7 @@ namespace RabookShelf.Controllers
                 return new HttpNotFoundResult();
             }
 
+
             return View(book);
         }
 
@@ -65,15 +66,16 @@ namespace RabookShelf.Controllers
         [HttpPost]
         public ActionResult Edit(Book book)
         {
-   
             ValidateTitle(book);
-            //TODO if the entry is valid....
-            //1) use the repo to update the entry
-            //2) redirect the user to the books list page, ie Index
+        
             if (ModelState.IsValid)
             {
+                Repository.UpdateBook(book);
 
+                return RedirectToAction("Index");
             }
+
+            //TODO Populate the genres select list items ViewBag property
            
             return View(book);
         }
