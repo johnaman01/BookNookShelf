@@ -60,7 +60,20 @@ namespace RabookShelf.Data
         {
             using (Context context = GetContext())
             {
+                //use DbSet find method
+                // ComicBook comicBookToUpdate = context.ComicBooks.Find(comicBook.Id);
+                var boo = context.Books.Where(b => b.Id == book.Id).FirstOrDefault();
+
+                context.Entry(boo).CurrentValues.SetValues(book);
+
+                context.Entry(boo).State = System.Data.Entity.EntityState.Modified;
+          
+                context.Books.Attach(book);
                 
+                //What does this do?
+                var bookEntry = context.Entry(book);
+                context.SaveChanges();
+
             }
         }
     }
