@@ -52,10 +52,10 @@ namespace RabookShelf.Controllers
 
         //Delete
 
-        //Get Entry
-        public ActionResult Entry()
+        //Get Edit
+        public ActionResult Edit()
         {
-            return View("Entry");
+            return View("Edit");
         }
 
     }
