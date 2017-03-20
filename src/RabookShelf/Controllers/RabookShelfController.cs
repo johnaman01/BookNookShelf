@@ -37,6 +37,8 @@ namespace RabookShelf.Controllers
             {
                 Repository.AddBook(book);
                 //TODO redirect to index (to see the book just added);
+
+                TempData["Message"] = "Your book was successfully added.";
                 return RedirectToAction("Index");
             }
 
@@ -72,6 +74,7 @@ namespace RabookShelf.Controllers
             {
                 Repository.UpdateBook(book);
 
+                TempData["Message"] = "Your book was successfully updated.";
                 return RedirectToAction("Index");
             }
 
@@ -85,6 +88,7 @@ namespace RabookShelf.Controllers
         {
             if (id == null)
             {
+
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
@@ -103,7 +107,8 @@ namespace RabookShelf.Controllers
         public ActionResult Delete(int id)
         {           
             Repository.Delete(id);
-        
+
+            TempData["Message"] = "Your book was successfully deleted.";
             return RedirectToAction("Index");       
         }
 

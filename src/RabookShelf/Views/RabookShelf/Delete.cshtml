@@ -5,17 +5,17 @@
 
 <h2>@ViewBag.Title</h2>
 
-<div class="alert alert-danger">
-    Are you sure you want to delete this book?
-</div>
+<div class="alert alert-danger">Are you sure you want to delete @Model.BookDisplayText?</div>
 
-<form method="post">
+@using (Html.BeginForm())
+{
     <div class="pad-top">
         <button type="submit" class="btn btn-danger btn-lg margin-right">
             <span class="glyphicon glyphicon-trash"></span> Delete
         </button>
-        <a href="/" class="btn btn-warning btn-lg">
-            <span class="glyphicon glyphicon-remove"></span> Cancel
+        <a href="@Url.Action("Index")" class="btn btn-warning btn-lg">
+            <span class="glyphicon glyphicon-warning-sign"></span> Cancel
         </a>
     </div>
-</form>
+
+}  
