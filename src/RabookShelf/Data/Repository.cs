@@ -60,13 +60,10 @@ namespace RabookShelf.Data
         {
             using (Context context = GetContext())
             {
-               
-                Book bookToUp = context.Books.Find(book.Id);
-
-                bookToUp.Title = book.Title;
-                bookToUp.Author = book.Author;
-                bookToUp.Genre = book.Genre;
-                bookToUp.Description = book.Description;
+                //attach book to context as Unmodified
+                context.Books.Attach(book);
+                //use form to change properties, ie state?
+                context.Entry(book).State = System.Data.Entity.EntityState.Modified;               
 
                 context.SaveChanges();
 
