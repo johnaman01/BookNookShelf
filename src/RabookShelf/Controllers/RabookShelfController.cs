@@ -81,6 +81,15 @@ namespace RabookShelf.Controllers
         }
 
         //Delete
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            return View();
+        }
 
 
         private void ValidateTitle(Book book)

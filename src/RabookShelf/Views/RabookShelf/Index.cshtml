@@ -5,31 +5,44 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
 
-<div class="row">
-    <div class="col-md-6">
-        <div class="well">
-            @foreach (var b in Model)
-            {
-            <h5>@Html.ActionLink(b.BookDisplayText, "Edit", new { id = b.Id })</h5>
-
-            }             
-        </div>
-        <h5>Orderby Title</h5>
-        <h5>Orderby Author</h5>
-        <h5>Orderby Genre</h5>
-        <h5>Orderby Type</h5>
-        <h5>Orderby Size</h5>            
-    </div>
-    <div class="col-md-6">
-        <img src="/Images"
-             alt="some picture" class="img-responsive" />
-    </div>
-    <div>
-        @Html.ActionLink("Add a Book", "Add")
-    </div>
-
+<div class="pull-right">
+    <a href=@Url.Action("Add") class="btn btn-primary btn-sm margin-right">
+        <span class="glyphicon glyphicon-book"></span><span class="hidden-xs">Add Book</span>
+    </a>
 </div>
 
 
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+
+    </tr>
+
+    @foreach (var b in Model)
+    {
+        <tr>
+            <td>@Html.ActionLink(b.BookDisplayText, "Edit", new { id = b.Id })</td>
+            <td>the author?</td>
+            <td>
+                <div class="pull-right">
+                    <a href="@Url.Action("Delete", new { id = b.Id })" class="btn btn-danger" btn-sm">
+                        <span class="glyphicon glyphicon-trash"></span><span class="hidden-xs">Delete</span>
+                    </a>
+                </div>
+            </td>
+            
+
+        </tr>    
+    }
+
+    @*<h5>Orderby Title</h5>
+    <h5>Orderby Author</h5>
+    <h5>Orderby Genre</h5>
+    <h5>Orderby Type</h5>
+    <h5>Orderby Size</h5>*@
+
+</table>
