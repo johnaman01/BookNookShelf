@@ -74,7 +74,9 @@ namespace RabookShelf.Data
         {
             using (Context context = GetContext())
             {
-                var book = new Book() { Id = bookId };
+                var bookToDel = new Book() { Id = bookId };
+                context.Books.Attach(bookToDel);
+                context.Books.Remove(bookToDel);
 
                 context.SaveChanges();
             }
