@@ -88,9 +88,24 @@ namespace RabookShelf.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            return View();
+            Book book = Repository.GetABook((int)id);
+
+            if (book == null)
+            {
+                return new HttpNotFoundResult();
+            }
+
+            return View(book);
         }
 
+        //create delete POST action method.  This method only needs an id not a whole model.
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {           
+            Repository.Delete(id);
+        
+            return RedirectToAction("Index");       
+        }
 
         private void ValidateTitle(Book book)
         {

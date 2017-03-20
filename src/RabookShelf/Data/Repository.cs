@@ -66,7 +66,17 @@ namespace RabookShelf.Data
                 context.Entry(book).State = System.Data.Entity.EntityState.Modified;               
 
                 context.SaveChanges();
+            }
+        }
+        //TODO
+        //<Add an DeleteBook method>
+        public static void Delete(int bookId)
+        {
+            using (Context context = GetContext())
+            {
+                var book = new Book() { Id = bookId };
 
+                context.SaveChanges();
             }
         }
     }
