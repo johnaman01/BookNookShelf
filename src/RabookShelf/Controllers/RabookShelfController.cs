@@ -8,6 +8,12 @@ namespace RabookShelf.Controllers
     public class RabookShelfController : Controller
     {
         private Context context = new Context();
+        //Get View
+        public ActionResult Test()
+        {
+            return View();
+        }
+
 
         //Get Index
         public ActionResult Index()
