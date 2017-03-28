@@ -4,7 +4,7 @@
 @using (Html.BeginForm())
 
 {
-    @Html.ValidationSummary()
+    @Html.ValidationSummary("The following errors were found!", new { @class= "alert alert-danger" })
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
